@@ -14,4 +14,4 @@ class LinkedList:
         self.prev=self
 
     def is_sentinel(self):
-        return True
+        return self.value == None
