@@ -8,6 +8,6 @@
 # YOUR NAME
 
 class LinkedList:
-    def __init__(self):
-        self.value=None
+    def __init__(self, value=None):
+        self.value=value
     
