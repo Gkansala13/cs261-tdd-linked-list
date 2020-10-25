@@ -17,21 +17,24 @@ class LinkedList:
         return self.value == None
 
     def is_empty(self):
-        if self.next !=self  or self.prev != self:
+        if self.next !=self or self.prev != self:
             return False
         return True
 
     def is_last(self):
-        return self.is_sentinel()
+        return self.last().is_sentinel()
 
     def last(self):
-        return self
+        return self.next
 
     def append(self, new):
-        self.next=new
-        self.prev=new
-        new.prev=self
-        new.next=self
+        if(self.is_empty()):
+            self.next=new
+            self.prev=new
+            new.prev=self
+            new.next=self
+        
+        
         
 
     
