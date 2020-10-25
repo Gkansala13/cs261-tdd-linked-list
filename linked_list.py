@@ -30,7 +30,8 @@ class LinkedList:
     def append(self, new):
         self.next=new
         self.prev=new
-    
+        new.prev=self
+        
 
     
          
