@@ -33,6 +33,12 @@ class LinkedList:
             self.prev=new
             new.prev=self
             new.next=self
+        else: 
+            self.prev=new
+            self=self.last()
+            self.next=new
+            new.next=self
+            new.prev=self
         
         
         
