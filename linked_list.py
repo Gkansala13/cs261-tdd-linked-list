@@ -26,5 +26,8 @@ class LinkedList:
 
     def last(self):
         return self
+
+    def append(self, new):
+        self.next=new
     
          
