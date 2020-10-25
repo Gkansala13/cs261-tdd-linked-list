@@ -31,6 +31,7 @@ class LinkedList:
         self.next=new
         self.prev=new
         new.prev=self
+        new.next=self
         
 
     
