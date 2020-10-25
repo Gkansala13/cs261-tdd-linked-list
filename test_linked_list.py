@@ -69,36 +69,36 @@ class TestLinkedList(unittest.TestCase):
         ll = LinkedList(fake_value())
         self.assertFalse(ll.is_sentinel())
 
-    # """
-    # Empty List
-    # """
+    """
+    Empty List
+    """
 
-    # def test_empty(self):
-    #     """
-    #     A list is initially empty.
-    #     """
-    #     ll = LinkedList()
-    #     self.assertTrue(ll.is_empty())
+    def test_empty(self):
+        """
+        A list is initially empty.
+        """
+        ll = LinkedList()
+        self.assertTrue(ll.is_empty())
 
-    # def test_not_empty(self):
-    #     """
-    #     A list node with a prev or next refering to anything other than itself
-    #     is not empty.
-    #     """
-    #     ll = LinkedList()
-    #     ll.next = fake_value()
-    #     self.assertFalse(ll.is_empty())
-    #     ll.prev = fake_value()
-    #     self.assertFalse(ll.is_empty())
-    #     ll.next = ll
-    #     self.assertFalse(ll.is_empty())
+    def test_not_empty(self):
+        """
+        A list node with a prev or next refering to anything other than itself
+        is not empty.
+        """
+        ll = LinkedList()
+        ll.next = fake_value()
+        self.assertFalse(ll.is_empty())
+        ll.prev = fake_value()
+        self.assertFalse(ll.is_empty())
+        ll.next = ll
+        self.assertFalse(ll.is_empty())
 
-    # def test_empty_is_last(self):
-    #     """
-    #     In an empty list, the sentinel is_last().
-    #     """
-    #     ll = LinkedList()
-    #     self.assertTrue(ll.is_last())
+    def test_empty_is_last(self):
+        """
+        In an empty list, the sentinel is_last().
+        """
+        ll = LinkedList()
+        self.assertTrue(ll.is_last())
 
     # def test_last_of_empty(self):
     #     """
