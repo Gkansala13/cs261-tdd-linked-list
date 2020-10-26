@@ -33,13 +33,14 @@ class LinkedList:
             self.prev=new
             new.prev=self
             new.next=self
-        else: 
-            self.prev=new
-            self=self.last()
-            self.next=new
-            new.next=self
+        elif(self.is_last()):
             new.prev=self
-        
+            new.next=self.next
+            new.next.prev=new
+            self.next=new
+        else:
+            self=self.next
+            self.append(new)
         
         
 
