@@ -37,6 +37,7 @@ class LinkedList:
         else:
             self.last().next=node
             node.prev=self.last()
+            node.next=self
 
 
 
