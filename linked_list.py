@@ -38,32 +38,44 @@ class LinkedList:
             self.last().next=node
             node.prev=self.last()
             node.next=self
+            self.prev=node
+
+    def delete(self):
+        self.next.prev=self.prev
+        self.prev.next=self.next
+        del self 
+
+    def insert(self,new_node):
+        self.next.prev = new_node
+        new_node.prev = self
+        new_node.next = self.next
+        self.next = new_node
+               
+    def at(self, n):
+        if (n==0):
+            return self
+        else:
+            return self.next.at(n-1)
+
+    def search(self, searched_value):
+        if (searched_value==self.value):
+            return self
+        if (self.is_last()):
+            return None
+        else:
+            return self.next.search(searched_value)
+            
+    def insert_in_order(self, new_node):
+        node = self.prev
+        if(node.is_sentinel()):
+            node.insert(new_node)
+        elif(new_node.value>node.value):
+             node.insert(new_node)
+        else:
+            node.insert_in_order(new_node)
+
+
+ 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-        
-        
-
-    
-         
